@@ -26,8 +26,10 @@ The second plot displays the mathematical profile of the collision interface, mo
 ### **Graph 3: Post-Bounce Fourier Frequency Spectrum**
 To isolate the physical identity of "Dark Energy," a Fast Fourier Transform (FFT) was conducted exclusively on the data from Our Universe *after* the collision had completely ended ($t > 30$). 
 
-Here's an interactive graph 
-https://6law459bsjwyjsum7w24oy.streamlit.app/#dark-energy-brane-simulation-dashboard
+
 
 * **The Primary Resonance Peak:** The frequency spectrum reveals a massive, sharp amplitude spike concentrated at a low frequency near the origin. 
 * **Physical Interpretation:** This peak is the definitive proof of the theory. It shows that the transient higher-dimensional collision has left a permanent, un-decayed background harmonic hum embedded in the fabric of our spacetime. In an observational context, this residual kinetic energy acts as a uniform background pressure, stretching the geometry of space. What astronomical observatories measure as the accelerating expansion of the universe (Dark Energy) is mathematically simulated here as this exact post-bounce residual frequency spike.
+
+Here is an Interacvtive graph
+https://6law459bsjwyjsum7w24oy.streamlit.app/#dark-energy-brane-simulation-dashboard
