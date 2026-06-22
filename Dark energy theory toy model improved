@@ -1,0 +1,71 @@
+import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.integrate import odeint
+
+st.title("🌌 Dark Energy Brane Simulation - Thin Bulk + Repulsion")
+st.markdown("Minimal bulk: branes nearly touching with repulsion + tunneling ripples.")
+
+# Sidebar
+omega1 = st.sidebar.slider("Our Universe Frequency (ω1)", 0.5, 3.0, 1.0, 0.1)
+omega2 = st.sidebar.slider("Neighboring Universe Frequency (ω2)", 0.5, 3.0, 1.2, 0.1)
+kappa_max = st.sidebar.slider("Max Coupling (κ_max)", 1.0, 10.0, 3.0, 0.5)  # Lower default for persistent
+repulsion_strength = st.sidebar.slider("Repulsion Strength (thin bulk)", 0.0, 5.0, 2.0, 0.2)
+tunneling_noise = st.sidebar.slider("Tunneling Noise (quantum ripples)", 0.0, 0.5, 0.1, 0.05)
+
+t = np.linspace(0, 100, 3000)  # Longer time for post-interaction behavior
+
+def kappa(t_val):
+    # Persistent but modulated coupling for near-contact
+    return kappa_max * np.exp(-((t_val - 30.0)**2) / (2 * 8.0**2)) + 0.5  # baseline + transient
+
+def coupled_oscillators(y, t_val):
+    x1, v1, x2, v2 = y
+    k = kappa(t_val)
+    sep = abs(x1 - x2)  # separation
+    
+    # Repulsive force (stronger when close)
+    repulse = repulsion_strength / (sep**2 + 0.1) * np.sign(x1 - x2)
+    
+    # Equations with repulsion + coupling
+    dx1 = v1
+    dv1 = -omega1**2 * x1 - k * (x1 - x2) + repulse + np.random.normal(0, tunneling_noise)
+    dx2 = v2
+    dv2 = -omega2**2 * x2 - k * (x2 - x1) - repulse  # opposite on neighbor
+    
+    return [dx1, dv1, dx2, dv2]
+
+# Solve
+initial = [1.0, 0.0, 1.05, 0.0]  # Start very close
+solution = odeint(coupled_oscillators, initial, t)
+
+# Plots
+fig, axs = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
+plt.style.use('dark_background')
+
+axs[0].plot(t, solution[:, 0], color='#1f77b4', label='Our Universe', lw=2)
+axs[0].plot(t, solution[:, 2], color='#ff7f0e', label='Neighbor', lw=2)
+axs[0].set_ylabel("Position / Scale Factor")
+axs[0].legend()
+axs[0].grid(True, alpha=0.3)
+
+# Separation plot
+separation = np.abs(solution[:, 0] - solution[:, 2])
+axs[1].plot(t, separation, color='cyan', label='Brane Separation')
+axs[1].set_ylabel("Separation (minimal bulk)")
+axs[1].set_xlabel("Time")
+axs[1].legend()
+axs[1].grid(True, alpha=0.3)
+
+st.pyplot(fig)
+
+# Optional: simple FFT on late-time our universe (residual ripple)
+late_slice = solution[t > 60, 0]
+freqs = np.fft.rfftfreq(len(late_slice), d=t[1]-t[0])
+fft = np.abs(np.fft.rfft(late_slice))
+st.subheader("Post-Interaction Residual Spectrum (Dark Energy Hum)")
+fig_fft, ax_fft = plt.subplots()
+ax_fft.plot(freqs[:50], fft[:50])  # Low freq focus
+ax_fft.set_xlabel("Frequency")
+ax_fft.set_ylabel("Amplitude")
+st.pyplot(fig_fft)
