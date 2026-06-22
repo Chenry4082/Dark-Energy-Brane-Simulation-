@@ -1,56 +1,30 @@
 # Dark Energy Brane Simulation
 
 ### **Abstract**
-This simulation explores a cyclical multiverse framework where **Dark Energy** is not a fundamental cosmological constant (Λ), but the observable effect of residual "ripples" leaking between neighboring branes in a higher-dimensional bulk. 
+This interactive simulation explores a cyclical brane-world framework in which **dark energy** emerges as the sustained effect of "ripples" leaking between neighboring branes via quantum tunneling in a thin bulk.
 
-**Core Picture**: Imagine an infinite bowl of cereal — countless Trix-like brane "universes" that expand (Big Bang) and contract (Big Bounce) in cycles. These branes are packed close together (thin bulk), appearing nearly touching yet repelling each other through a stabilizing force. Ripples in the "milk" (bulk spacetime) squeeze through the narrow gaps via **quantum tunneling**, delivering a small, steady energy influx that drives the observed accelerated expansion on our brane.
+**Core Picture**: Imagine an infinite bowl of cereal — countless Trix-like brane "universes" expanding (Big Bang phase) and contracting (Big Bounce phase) in cycles. These branes sit very close together (thin bulk), appearing nearly touching to the naked eye yet repelling each other through a stabilizing force. Ripples in the "milk" (higher-dimensional bulk) squeeze through the narrow gaps via quantum tunneling, delivering a small but persistent energy influx. This creates a nearly constant outward push — the observed accelerated expansion we attribute to dark energy.
 
-This builds on brane cosmology and ekpyrotic/cyclic models, using a simple coupled-oscillator simulation to visualize the dynamics.
+The model is a **classical coupled-oscillator toy simulation** inspired by real ideas in brane cosmology and ekpyrotic/cyclic models. It is not a full quantum-gravity or 5D GR solution, but a helpful visualization for intuition-building.
 
 ---
 
 ### **Key Concepts**
-- **Cyclic Branes**: Each universe oscillates between expansion and contraction.
-- **Thin Bulk + Repulsion**: Branes hover near each other with a repulsive barrier preventing merger, allowing gentle, ongoing interactions.
-- **Quantum Tunneling Ripples**: Energy/momentum leaks across the thin separation, sustaining a nearly constant "push" (negative pressure) that mimics dark energy.
-- **Big Bounce**: Closer approaches trigger brief, chaotic energy exchange while avoiding singularities.
+- **Cyclic Branes**: Each universe oscillates between expansion and contraction phases.
+- **Thin Bulk + Repulsion**: Branes hover near one another with a short-range repulsive barrier (modeled as ~1/separation²) that prevents full merger while allowing ongoing gentle interactions.
+- **Quantum Tunneling Ripples**: Stochastic noise in the simulation represents small energy/momentum leaks across the thin separation, sustaining a residual low-frequency "hum" that drives accelerated expansion.
+- **Big Bounce**: Occasional closer approaches during oscillations trigger chaotic but brief energy exchange without singularities.
 
 ---
 
 ### **Simulation Features**
-- Interactive Streamlit dashboard to explore parameters (frequencies, coupling, repulsion strength, tunneling noise).
-- Visualizes spacetime positions, brane separation, coupling strength, and post-interaction frequency spectrum (the "dark energy hum").
-- Demonstrates how a transient or persistent interaction leaves a permanent baseline shift in our universe's expansion.
+- Fully interactive Streamlit app with sliders for frequencies, coupling, repulsion strength, and tunneling amplitude.
+- Visualizes brane positions, separation dynamics, velocity (expansion intuition), and the post-interaction Fourier spectrum.
+- Demonstrates how near-contact repulsion stabilizes the system while tunneling maintains a persistent effect.
 
-**[Launch Interactive Demo](https://6law459bsjwyjsum7w24oy.streamlit.app/)** (update link if needed)
-
----
-
-### **Graph 1: Spacetime Dynamics & Brane Separation**
-(Include your current or updated plots here — preferably with the new repulsion + separation plot.)
-
-- **Pre-interaction**: Independent oscillations at native frequencies (ω₁ ≈ 1.0 for ours, ω₂ ≈ 1.2 for neighbor).
-- **Interaction Phase**: Chaotic energy exchange + repulsion during close approach.
-- **Post-interaction**: Our universe shows a shifted baseline + small persistent oscillations due to tunneled ripples. Brane separation remains small but stable due to repulsion.
+**[Launch Interactive Demo]** (update with your current Streamlit link)
 
 ---
-
-### **Graph 2: Coupling & Repulsion**
-Time-dependent coupling (transient Gaussian + baseline for near-contact) combined with a repulsive 1/separation² term.
-
-This shows how interactions are stronger when branes are close, yet the repulsion prevents collapse.
-
----
-
-### **Graph 3: Post-Interaction Fourier Spectrum (The Dark Energy Signature)**
-FFT on late-time data from our universe reveals a persistent low-frequency component — the mathematical "hum" representing the residual kinetic ripple that sources accelerated expansion.
-
----
-
-### **Limitations & Future Work**
-- This is a **classical toy model** (coupled harmonic oscillators) inspired by real string/brane theory. It does not solve full 5D+ general relativity.
-- Future extensions: Link oscillator position to cosmological scale factor a(t), compute effective equation-of-state w, add stochastic tunneling, or multiple neighboring branes.
-- Inspired by ekpyrotic/cyclic cosmology (Steinhardt, Turok, Khoury et al.) and Randall-Sundrum braneworld models.
 
 ### **How to Run Locally**
 ```bash
