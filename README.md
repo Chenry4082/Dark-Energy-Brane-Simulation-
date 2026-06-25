@@ -49,33 +49,3 @@ The simulation generates three real-time charts mapping the results directly to 
 * **Expansion Velocity ($da/dt$):** The first derivative of the scale factor, acting as a direct analogue to the **Hubble Parameter ($H$)** to chart the changing acceleration rates across different epochs.
 * **Cosmic Acoustic Peaks (CMB Spectrum Analogue):** Applies a Fast Fourier Transform (FFT) with signal detrending onto late-stage universe data. The resulting low-frequency peaks provide a beautiful visual analogue to the acoustic anisotropy peaks observed by the Planck Satellite in the **Cosmic Microwave Background (CMB)**.
 
----
-
-## 🛠️ Installation & Local Execution
-
-To run this simulation locally, ensure you have Python installed along with the required scientific visualization libraries.
-
-1. **Clone the Repository:**
-```bash
-git clone https://github.com/Chenry4082/Dark-Energy-Brane-Simulation-.git
-cd Dark-Energy-Brane-Simulation-
-
-```
-
-
-2. **Install Dependencies:**
-```bash
-pip install streamlit numpy matplotlib scipy
-
-```
-
-
-3. **Launch the Streamlit App:**
-```bash
-streamlit run "Dark energy toy model_app.py"
-
-
-
-## 🌌 Theoretical Interpretation
-
-The interplay between the stabilizing inter-brane repulsion and the persistent low-frequency resonant modes shown in the power spectrum demonstrates how tunneled quantum ripples can sustain accelerated cosmic expansion over long time horizons without suffering from rapid dilution.
