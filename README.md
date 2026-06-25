@@ -19,7 +19,7 @@ This interactive simulation explores a cyclical thin-bulk braneworld framework w
 - Three synchronized plots: scale factor evolution, inter-brane separation, and expansion rate (da/dt).
 - Late-time FFT showing persistent low-frequency residual (CMB analogue).
 
-**[Launch Interactive Demo]** (update link)
+**[Launch Interactive Demo]**
 
 ---
 
