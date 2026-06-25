@@ -1,7 +1,3 @@
-Here is a fully updated, professional README markdown file meticulously crafted around your exact new code. It includes the new stochastic math, the cosmic damping parameter, and the ties to actual observational astronomy (Supernovae and the CMB).
-
----
-
 # 🌌 Dark Energy Brane Simulation: Quantum Tunneling & Cosmic Acceleration
 
 This repository contains a 2D cosmological simulation exploring a multi-brane universe framework. Moving away from standard decaying scalar fields, this model simulates accelerated cosmic expansion through **stochastic quantum tunneling** across a highly compactified, thin inter-brane matrix.
