@@ -47,5 +47,7 @@ The simulation generates three real-time charts mapping the results directly to 
 * **Cosmological Scale Factor $a(t)$ Profile:** Tracks the size evolution of our universe vs. its neighbor. The curve simulates real expansion metrics inspired by **Supernova Hubble diagrams**.
 * **Inter-Brane Matrix Thickness:** Illustrates how the "thin bulk" matrix expands and stabilizes under the influence of the repulsion force.
 * **Expansion Velocity ($da/dt$):** The first derivative of the scale factor, acting as a direct analogue to the **Hubble Parameter ($H$)** to chart the changing acceleration rates across different epochs.
+
+* https://olqjvmtm4ttv9utk95oyys.streamlit.app/
 * **Cosmic Acoustic Peaks (CMB Spectrum Analogue):** Applies a Fast Fourier Transform (FFT) with signal detrending onto late-stage universe data. The resulting low-frequency peaks provide a beautiful visual analogue to the acoustic anisotropy peaks observed by the Planck Satellite in the **Cosmic Microwave Background (CMB)**.
 
